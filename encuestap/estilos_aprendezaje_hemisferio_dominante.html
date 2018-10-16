@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Estilos de aprendizaje</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/jPages.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/github.css">
+        <!--<script -->
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/highlight.pack.js"></script>
+        <script type="text/javascript" src="js/tabifier.js"></script>
+        <script src="js/js.js"></script>
+        <script src="js/jPages.js"></script>
+        <script>
+            /* when document is ready */
+            $(function () {
+                /* initiate the plugin */
+                $("div.holder").jPages({
+                    containerID: "itemContainer",
+                    perPage: 3,
+                    startPage: 1,
+                    startRange: 1,
+                    midRange: 5,
+                    endRange: 1
+                });
+
+            });
+        </script>
+
+        <style type="text/css">
+            .holder {
+                margin: 15px 0;
+            }
+
+            .holder a {
+                font-size: 12px;
+                cursor: pointer;
+                margin: 0 5px;
+                color: #333;
+            }
+
+            .holder a:hover {
+                background-color: #222;
+                color: #fff;
+            }
+
+            .holder a.jp-previous { margin-right: 15px; }
+            .holder a.jp-next { margin-left: 15px; }
+
+            .holder a.jp-current, a.jp-current:hover {
+                color: #FF4242;
+                font-weight: bold;
+            }
+
+            .holder a.jp-disabled, a.jp-disabled:hover {
+                color: #bbb;
+            }
+
+            .holder a.jp-current, a.jp-current:hover,
+            .holder a.jp-disabled, a.jp-disabled:hover {
+                cursor: default;
+                background: none;
+            }
+
+            .holder span { margin: 0 5px; }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="advanced-search-form">
+            <h2>Estilos de aprendizaje</h2>
+            <form>
+                <div id="content" class="defaults">
+                    <!-- navigation holder -->
+                    <div class="holder"></div>
+
+                    <ul id="itemContainer">
+                       <li><label>1. ¿Cuando tengo que resolver un problema?</label>
+                            <p>
+                                <label><input type="radio" name="radio1" id="radio1" value="1"/>Imagino las distintas soluciones antes de analizarlo </label><br />
+                                <label><input type="radio" name="radio1" id="radio1" value="2"/>Reflexiono, tomando nota de las diferentes posibilidades, para poder elegir la mejor alternativa </label><br />
+                                <label><input type="radio" name="radio1" id="radio1" value="3"/>Recuerdo experiencias pasadas que salieron bien y me inspiro en ellas</label><br />
+                                <label><input type="radio" name="radio1" id="radio1" value="4"/>Espero a ver si la situación se resuelve sola</label><br />
+                            </p><hr /></li>
+                        <li><label>2. ¿Soñar despierto es?</label>
+                            <p>
+                                <label><input type="radio" name="radio2" id="radio2" value="1"/>Una perdida de tiempo</label><br />
+                                <label><input type="radio" name="radio2" id="radio2" value="2"/>Divertido y relajante</label><br />
+                                <label><input type="radio" name="radio2" id="radio2" value="3"/>Una ayuda real para encontrar una soluciones  creativas</label><br />
+                                <label><input type="radio" name="radio2" id="radio2" value="4"/>Un recurso valido para planificar el futuro </label><br />
+                            </p><hr /></li>
+                        <li><label>3. ¿En mi vida cotidiana ?</label>
+                            <p>
+                                <label><input type="radio" name="radio3" id="radio3" value="1"/>Anoto en mi agenda  todo lo que debo hacer, lo consulto permanentemente</label><br />
+                                <label><input type="radio" name="radio3" id="radio3" value="2"/>Me alcanza para visualizar en la mente mis comportamientos</label><br />
+                                <label><input type="radio" name="radio3" id="radio3" value="3"/>Dejo que las cosas  vayan llegando</label><br />
+                                <label><input type="radio" name="radio3" id="radio3" value="4"/>Programo el día previendo el tiempo necesario para actividad</label><br />
+                            </p><hr /></li>
+                        <li><label>4. Quen hobbies prefiero(Seleccione una o varias)?</label>
+                            <p>
+                                <label><input type="radio" name="radio4" id="radio4" value="1"/>Natación</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="2"/>Tenis</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="3"/>Acampar</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="4"/>Pescar</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="5"/>Cantar</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="6"/>Jardinera</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="7"/>Tocar música</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="8"/>Leer</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="9"/>Las artes y/o los artesanos</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="10"/>El ocio absoluto</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="11"/>Andar en bicicleta</label> <br />
+                                <label><input type="radio" name="radio4" id="radio4" value="12"/>Coleccionar</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="13"/>Escribir</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="14"/>Jugar ajedrez</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="15"/>Resolver acertijos</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="16"/>Bailar</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="17"/>Caminar y/o correr</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="18"/>Conversar y debatir</label><br />
+                            </p><hr /></li>
+                        <li><label>5. ¿Si quisiera, por ejemplo, aprender a bailar mejor, necesitaría?</label>
+                            <p>
+                                <label><input type="radio" name="radio5" id="radio5" value="1"/>imitar, dejándome llevar por la música</label><br />
+                                <label><input type="radio" name="radio5" id="radio5" value="2"/>Aprender la secuencia y memorizar por etapas</label><br />
+                            </p><hr /></li>
+                        <li><label>6. ¿Me expreso suficientemente bien cuando hablo ?</label>
+                            <p>
+                                <label><input type="radio" name="radio6" id="radio6" value="1"/>Si</label><br />
+                                <label><input type="radio" name="radio6" id="radio6" value="2"/>No</label><br />
+                            </p><hr /></li>
+                        <li><label>7. ¿Si necesito recordar datos, nombres o cualquier otra información?</label>
+                            <p>
+                                <label><input type="radio" name="radio7" id="radio7" value="1"/>Lo visualizo mentalmente</label><br />
+                                <label><input type="radio" name="radio7" id="radio7" value="2"/>Lo anoto</label><br />
+                                <label><input type="radio" name="radio7" id="radio7" value="3"/>Lo repito varias veces (incluso en voz alta)</label><br />
+                                <label><input type="radio" name="radio7" id="radio7" value="4"/>Lo asocio con una información anterior</label>  <br />
+                            </p><hr /></li>
+                        <li><label>8. ¿Recuerdo fácilmente los rostros?</label>
+                            <p>
+                                <label><input type="radio" name="radio8" id="radio8" value="1"/>Si</label><br />
+                                <label><input type="radio" name="radio8" id="radio8" value="2"/>No</label><br />
+                            </p><hr /></li>
+                        <li><label>9. ¿Cuando escribo (cartas, diario íntimo, poemas)?</label>
+                            <p>
+                                <label><input type="radio" name="radio9" id="radio9" value="1"/>Invento palabras</label> <br />
+                                <label><input type="radio" name="radio9" id="radio9" value="2"/>Me gusta el lenguaje poético</label><br />
+                                <label><input type="radio" name="radio9" id="radio9" value="3"/>Me preocupa encontrar las palabras precisas</label><br />
+                            </p><hr /></li>
+                        <li><label>10. ¿Cuando converso, me siento mas a gusto ?</label>
+                            <p>
+                                <label><input type="radio" name="radio10" id="radio10" value="1"/>Cuando escucho</label> <br />
+                                <label><input type="radio" name="radio10" id="radio10" value="2"/>Cuando hablo</label> <br />
+                            </p><hr /></li>
+                        <li><label>11. ¿En la escuela preferiría ?</label>
+                            <p>
+                                <label><input type="radio" name="radio11" id="radio11" value="1"/>El algebra</label><br />
+                                <label><input type="radio" name="radio11" id="radio11" value="2"/>La geometría</label> <br />
+                            </p><hr /></li>
+                        <li><label>12. ¿Hago gestos cada vez que ?</label>
+                            <p>
+                                <label><input type="radio" name="radio12" id="radio12" value="1"/>Necesito enfatizar una idea</label><br />
+                                <label><input type="radio" name="radio12" id="radio12" value="2"/>Expresar sentimientos</label><br />
+                            </p><hr /></li>
+                        <li><label>13. ¿Después de haber asistido a un recital de música?</label>
+                            <p>
+                                <label><input type="radio" name="radio13" id="radio13" value="1"/>Soy capaz de entonar muchos temas</label> <br />
+                                <label><input type="radio" name="radio13" id="radio13" value="2"/>Recuerdo mucho  las letras</label> <br />
+                            </p><hr /></li>
+                        <li><label>14. ¿Las siguientes afirmaciones corresponden a mi caso (seleccione la que crea pertinente)?</label>
+                            <p>
+                                <label><input type="radio" name="radio14" id="radio14" value="1"/>Capto rápidamente lo que dicen contratos, manuales de instrucciones y documentos legales</label> <br />
+                                <label><input type="radio" name="radio14" id="radio14" value="2"/>Entiendo bien los esquemas y diagramas</label> <br />
+                                <label><input type="radio" name="radio14" id="radio14" value="3"/>Visualizo intensamente los personajes y escenas de una novela</label><br />
+                                <label><input type="radio" name="radio14" id="radio14" value="4"/>Me es fácil encontrar lo que necesito en el diccionario o la guía telefónica</label><br />
+                                <label><input type="radio" name="radio14" id="radio14" value="5"/>Me gustan los juego de palabras</label><br />
+                                <label><input type="radio" name="radio14" id="radio14" value="6"/>Tomo muchas notas durante reuniones y conferencias</label> <br />
+                                <label><input type="radio" name="radio14" id="radio14" value="7"/>A menudo  las ideas me surgen sin saber donde</label> <br />
+                            </p></li>
+                    </ul>
+                </div>
+                <button type="button" name="result" id="result">Resultado</button>
+            </form>
+        </div>
+            <script type="text/javascript"></script>
+            <script language="javascript">
+                $('#result').click(function(){
+                    var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
+                            + parseInt($('input:radio[id=radio7]:checked').val()) + parseInt($('input:radio[id=radio9]:checked').val())
+                            + parseInt($('input:radio[id=radio13]:checked').val());
+                    var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
+                            + parseInt($('input:radio[id=radio10]:checked').val()) + parseInt($('input:radio[id=radio12]:checked').val())
+                            + parseInt($('input:radio[id=radio15]:checked').val());
+                    var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
+                            + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
+                            + parseInt($('input:radio[id=radio14]:checked').val());
+                    console.log('Visual: '+visual+'; Auditiva: '+auditiva+'; Tactil: '+tactil);
+                });
+            </script>
+    </body>
+</html>

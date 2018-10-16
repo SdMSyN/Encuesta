@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Estilos de aprendizaje</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/jPages.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/github.css">
+        <!--<script -->
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="js/highlight.pack.js"></script>
+        <script type="text/javascript" src="js/tabifier.js"></script>
+        <script src="js/js.js"></script>
+        <script src="js/jPages.js"></script>
+        <script>
+            /* when document is ready */
+            $(function () {
+                /* initiate the plugin */
+                $("div.holder").jPages({
+                    containerID: "itemContainer",
+                    perPage: 3,
+                    startPage: 1,
+                    startRange: 1,
+                    midRange: 5,
+                    endRange: 1
+                });
+
+            });
+        </script>
+
+        <style type="text/css">
+            .holder {
+                margin: 15px 0;
+            }
+
+            .holder a {
+                font-size: 12px;
+                cursor: pointer;
+                margin: 0 5px;
+                color: #333;
+            }
+
+            .holder a:hover {
+                background-color: #222;
+                color: #fff;
+            }
+
+            .holder a.jp-previous { margin-right: 15px; }
+            .holder a.jp-next { margin-left: 15px; }
+
+            .holder a.jp-current, a.jp-current:hover {
+                color: #FF4242;
+                font-weight: bold;
+            }
+
+            .holder a.jp-disabled, a.jp-disabled:hover {
+                color: #bbb;
+            }
+
+            .holder a.jp-current, a.jp-current:hover,
+            .holder a.jp-disabled, a.jp-disabled:hover {
+                cursor: default;
+                background: none;
+            }
+
+            .holder span { margin: 0 5px; }
+        </style>
+    </head>
+    <body>
+        <div class="container" id="advanced-search-form">
+            <h2>Estilos de aprendizaje</h2>
+               <form>
+                 <div id="content" class="defaults">
+                    <!-- navigation holder -->
+                    <div class="holder"></div>
+                       <ul id="itemContainer">
+                        <li><label>1. ¿Entiendo mejor algo?</label>
+                            <p>
+                                <label><input type="radio" name="radio1" id="radio1" value="1" />Si lo practico</label><br />
+                                <label><input type="radio" name="radio1" id="radio1" value="2" />Si pienso en ello</label><br />
+                            </p><hr /></li>
+                        <li><label>2. ¿Me considero?</label>
+                            <p>
+                                <label><input type="radio" name="radio2" id="radio2" value="1" />Realista</label><br />
+                                <label><input type="radio" name="radio2" id="radio2" value="2"/>Inovador</label><br />
+                            </p><hr /></li>
+                        <li><label>3. ¿Cuando pienso acerca de lo que hice ayer, es más probable que lo haga sobre la base de?</label>
+                            <p>
+                                <label><input type="radio" name="radio3" id="radio3" value="1"/>Una imagen</label><br />
+                                <label><input type="radio" name="radio3" id="radio3" value="2"/>Palabras</label><br />
+                            </p><hr /></li>
+                        <li><label>4. ¿Tengo tendencia a?</label>
+                            <p>
+                                <label><input type="radio" name="radio4" id="radio4" value="1"/>Entender los detalles de un tema pero no ver claramente su estrutura completa</label><br />
+                                <label><input type="radio" name="radio4" id="radio4" value="2"/>Entender la estrutura completa pero no ver claramente los detalles</label><br />
+                            </p><hr /></li>
+                        <li><label>5. ¿Cuando estoy aprendiendoalgo nuevo me ayuda?</label>
+                            <p>
+                                <label><input type="radio" name="radio5" id="radio5" value="1"/>Hablar de ello</label><br />
+                                <label><input type="radio" name="radio5" id="radio5" value="2"/>Pensar en ello</label><br />
+                            </p><hr /></li>
+                        <li><label>6. ¿Si yo fuera profesor, yo preferiria  dar un curso ?</label>
+                            <p>
+                                <label><input type="radio" name="radio6" id="radio6" value="1"/>Que trate sobre hechos y situaciones reales de la vida</label><br />
+                                <label><input type="radio" name="radio6" id="radio6" value="2"/>Que trate con ideas y teorias</label><br />
+                            </p><hr /></li>
+                        <li><label>7. ¿Prefiero obtener información nueva de?</label>
+                            <p>
+                                <label><input type="radio" name="radio7" id="radio7" value="1"/>Imagenes, diagramas, graficas o mapas</label><br />
+                                <label><input type="radio" name="radio7" id="radio7" value="2"/>Instrucciones escritas o información verbal</label><br />
+                            </p><hr /></li>
+                        <li><label>8. ¿Una ves que entiendo?</label>
+                            <p>
+                                <label><input type="radio" name="radio8" id="radio8" value="1"/>Todas las partes, entiendo el total</label><br />
+                                <label><input type="radio" name="radio8" id="radio8" value="2"/>El totla de algo, entiendo cómo encajan sus partes</label><br />
+                            </p><hr /></li>
+                        <li><label>9. ¿En un grupo de estudio que trabaja con un material dificil es mas probale que?</label>
+                            <p>
+                                <label><input type="radio" name="radio9" id="radio9" value="1"/>Participe y contribuya con ideas</label><br />
+                                <label><input type="radio" name="radio9" id="radio9" value="2"/>No participe y sólo esuche</label><br />
+                            </p><hr /></li>
+                        <li><label>10. ¿Es mas facil para mi ?</label>
+                            <p>
+                                <label><input type="radio" name="radio10" id="radio10" value="1"/>Aprender hechos</label><br />
+                                <label><input type="radio" name="radio10" id="radio10" value="2"/>Aprender conceptos</label><br />
+                            </p><hr /></li>
+                        <li><label>11. ¿En en libro con muchas imagenes y grafica es mas prbable que?</label>
+                            <p>
+                                <label><input type="radio" name="radio11" id="radio11" value="1"/>Reise cuidadosamente las imagenes y las gráficas</label><br />
+                                <label><input type="radio" name="radio11" id="radio11" value="2"/>Me concentre en el texto escrito</label><br />
+                            </p><hr /></li>
+                        <li><label>12. ¿Cuando  resulevo problemas me matemáticas?</label>
+                            <p>
+                                <label><input type="radio" name="radio12" id="radio12" value="1"/>Generalmente trabajo sobre las soluciones con un paso a la vez</label><br />
+                                <label><input type="radio" name="radio12" id="radio12" value="2"/>Frecuentemente sé cuales son las soluciones,pero luego tengo dificultad para imaginarme los pasos para llegar a ellas</label><br />
+                            </p><hr /></li>
+                        <li><label>13. ¿En las clases que he asistido?</label>
+                            <p>
+                                <label><input type="radio" name="radio13" id="radio13" value="1"/>He llegado a saber como son muchos de los estudiantes</label><br />
+                                <label><input type="radio" name="radio13" id="radio13" value="2"/>Raramente he llegado a saber como son muchos estudiantes</label><br />
+                            </p><hr /></li>
+                        <li><label>14. ¿Cuando leo temas que no son de ficcion, prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio14" id="radio14" value="1"/>Algo que me enseñe nuevos hechos o me digan como hacer algo</label><br />
+                                <label><input type="radio" name="radio14" id="radio14" value="2"/>Algo que me de nuevas ideas  en que pensaar</label><br />
+                            </p><hr /></li>
+                        <li><label>15. ¿Me gustan los maestros  ?</label>
+                            <p>
+                                <label><input type="radio" name="radio15" id="radio15" value="1"/>Que utilizan muchos esquemas</label><br />
+                                <label><input type="radio" name="radio15" id="radio15" value="2"/>Que toman mucho tiempo para explicarlo</label><br />
+                            </p><hr /></li>
+                        <li><label>16. ¿Cuando estoy analizando un cuento o novela?</label>
+                            <p>
+                                <label><input type="radio" name="radio16" id="radio16" value="1"/>Pienso en los incidentes y trato de acomodarlos para configurar los temas</label><br />
+                                <label><input type="radio" name="radio16" id="radio16" value="2"/>Me doy cuenta de cuales son los temas cuando termino de leer y luego tengo que regresar y encontrar los incidentes que los demuestran</label><br />
+                            </p><hr /></li>
+                        <li><label>17. ¿Cuando comienzo a resolver un problema de tarea es más probable que?</label>
+                            <p>
+                                <label><input type="radio" name="radio17" id="radio17" value="1"/>Comienze a trabajar  en su solución inmediatamente</label><br />
+                                <label><input type="radio" name="radio17" id="radio17" value="2"/>Primero trato de entender completamente el problema</label><br />
+                            </p><hr /></li>
+                        <li><label>18. ¿Prefiero la idea de?</label>
+                            <p>
+                                <label><input type="radio" name="radio18" id="radio18" value="1"/>Certeza</label><br />
+                                <label><input type="radio" name="radio18" id="radio18" value="2"/>Teoria</label><br />
+                            </p><hr /></li>
+                        <li><label>19. ¿Recuerdo mejor?</label>
+                            <p>
+                                <label><input type="radio" name="radio19" id="radio19" value="1"/>Lo que veo</label><br />
+                                <label><input type="radio" name="radio19" id="radio19" value="2"/>Lo que oigo</label><br />
+                            </p><hr /></li>
+                        <li><label>20. ¿Es mas importante para mi un profesor ?</label>
+                            <p>
+                                <label><input type="radio" name="radio20" id="radio20" value="1"/>Exponga el material en pasos secuenciales claros</label><br />
+                                <label><input type="radio" name="radio20" id="radio20" value="2"/>Me de un panorama general y relacione el material con otros temas</label> <br />
+                            </p><hr /></li>
+                        <li><label>21. ¿Prefiero estudiar ?</label>
+                            <p>
+                                <label><input type="radio" name="radio21" id="radio21" value="1"/>En un grupo de estudio</label><br />
+                                <label><input type="radio" name="radio21" id="radio21" value="2"/>Solo</label><br />
+                            </p><hr /></li>
+                        <li><label>22. ¿Me considero ?</label>
+                            <p>
+                                <label><input type="radio" name="radio22" id="radio22" value="1"/>Cuidadoso  en los detalles de mi trabajo</label><br />
+                                <label><input type="radio" name="radio22" id="radio22" value="2"/>Creativo en la forma en la que hago mi trabajo</label><br />
+                            </p><hr /></li>
+                        <li><label>23. ¿Cuando alguien me da direcciones de nuevos lugares, prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio23" id="radio23" value="1"/>Un mapa</label><br />
+                                <label><input type="radio" name="radio23" id="radio23" value="2"/>Instrucciones escritas</label><br />
+                            </p><hr /></li>
+                        <li><label>24. ¿Aprendo?</label>
+                            <p>
+                                <label><input type="radio" name="radio24" id="radio24" value="1"/>A un paso constante. Si estudio con ahincó consigo lo que deseo</label>> <br />
+                                <label><input type="radio" name="radio24" id="radio24" value="2"/>En inicios y pausas. Me llego  a confundir y súbitamente lo entiendo</label><br />
+                            </p><hr /></li>
+                        <li><label>25. ¿Prefiero primero?</label>
+                            <p>
+                                <label><input type="radio" name="radio25" id="radio25" value="1"/>Hacer algo y ver que sucede </label><br />
+                                <label><input type="radio" name="radio25" id="radio25" value="2"/>Pensar como voy a hacer algo</label><br />
+                            </p><hr /></li>
+                        <li><label>26. ¿Cuando leo por diversión, me gustan los escritores que ?</label>
+                            <p>
+                                <label><input type="radio" name="radio26" id="radio26" value="1"/>Dicen claramente lo que desean dar a entender</label><br />
+                                <label><input type="radio" name="radio26" id="radio26" value="2"/>Dicen las cosas en forma creativa e interesante</label><br />
+                            </p><hr /></li>
+                        <li><label>27. ¿Cuando veo un esquema o bosquejo en clase, es más probable  que recuerde ?</label>
+                            <p>
+                                <label><input type="radio" name="radio27" id="radio27" value="1"/>La imagen</label><br />
+                                <label><input type="radio" name="radio27" id="radio27" value="2"/>Lo que el profesor dijo acerca de ella</label><br />
+                            </p><hr /></li>
+                        <li><label>28. ¿Cuando me enfrento a un cuerpo de información?</label>
+                            <p>
+                                <label><input type="radio" name="radio28" id="radio28" value="1"/>Me concentro en los detalles y pierdo de vista el total de la misma</label><br />
+                                <label><input type="radio" name="radio28" id="radio28" value="2"/>Trato de entender el todo antes de ir a los detalles </label><br />
+                            </p><hr /></li>
+                        <li><label>29. ¿Recuerdo más fácil?</label>
+                            <p>
+                                <label><input type="radio" name="radio29" id="radio29" value="1"/>Algo que he hecho</label><br />
+                                <label><input type="radio" name="radio29" id="radio29" value="2"/>Algo en lo que he pensado mucho</label><br />
+                            </p><hr /></li>
+                        <li><label>30. ¿Cuando tengo que hacer un trabajo, prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio30" id="radio30" value="1"/>Dominar una forma de hacerlo</label><br />
+                                <label><input type="radio" name="radio30" id="radio30" value="2"/>Intentar nuevas formas de hacerlo </label><br />
+                            </p><hr /></li>
+                        <li><label>31. ¿Cuando alguien me enseña datos, prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio31" id="radio31" value="1"/>Graficas</label><br />
+                                <label><input type="radio" name="radio31" id="radio31" value="2"/>Resúmenes de texto</label><br />
+                            </p><hr /></li>
+                        <li><label>32. ¿Cuando escribo un trabajo, es mas probable  que?</label>
+                            <p>
+                                <label><input type="radio" name="radio32" id="radio32" value="1"/>Lo haga (piense o escribe) desde el principio y avance</label><br />
+                                <label><input type="radio" name="radio32" id="radio32" value="2"/>Lo haga (piense o escribe) en diferentes partes y luego las ordene</label><br />
+                            </p><hr /></li>
+                        <li><label>33. ¿Cuando tengo que trabajar en un proyecto de grupo, primero quiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio33" id="radio33" value="1"/>Realizar un “tormenta de ideas” donde cada uno contribuye con ideas </label><br/>
+                                <label><input type="radio" name="radio33" id="radio33" value="2"/>Realizar la “tormenta de ideas” en forma personal  y luego juntarme con el grupo para comparar las ideas</label><br/>
+                            </p><hr /></li>
+                        <li><label>34. ¿Considero que es mejor elogio llamar a alguien?</label>
+                            <p>
+                                <label><input type="radio" name="radio34" id="radio34" value="1"/>Sensible</label><br />
+                                <label><input type="radio" name="radio34" id="radio34" value="2"/>Imaginativo</label><br />
+                            </p><hr /></li>
+                        <li><label>35. ¿Cuando conozco gente en una fiesta, es más probable que recuerde?</label>
+                            <p>
+                                <label><input type="radio" name="radio35" id="radio35" value="1"/>Como es su apariencia</label><br />
+                                <label><input type="radio" name="radio35" id="radio35" value="2"/>Lo que dicen de sí mismos</label><br />
+                            </p><hr /></li>
+                        <li><label>36. ¿Cuando estoy  aprendiendo un tema, prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio36" id="radio36" value="1"/>Mantenerme concentrado  en ese tema, aprendiendo lo que mas se pueda de el</label><br />
+                                <label><input type="radio" name="radio36" id="radio36" value="2"/>Hacer conexiones entre ese tema y temas relacionados</label><br />
+                            </p><hr /></li>
+                        <li><label>37. ¿Me considero?</label>
+                            <p>
+                                <label><input type="radio" name="radio37" id="radio37" value="1"/>Abierto</label><br />
+                                <label><input type="radio" name="radio37" id="radio37" value="2"/>Cerrado</label><br />
+                            </p><hr /></li>
+                        <li><label>38. ¿Prefiero cursos que de importancia a?</label>
+                            <p>
+                                <label><input type="radio" name="radio38" id="radio38" value="1"/>Material concreto (hechos, datos)</label><br />
+                                <label><input type="radio" name="radio38" id="radio38" value="2"/>Material abstracto (conceptos teorías)</label><br />
+                            </p><hr /></li>
+                        <li><label>39. ¿Para divertirme prefiero?</label>
+                            <p>
+                                <label><input type="radio" name="radio39" id="radio39" value="1"/>Ver televisión </label><br />
+                                <label><input type="radio" name="radio39" id="radio39" value="2"/>Leer un libro</label><br />
+                            </p><hr /></li>
+                        <li><label>40. ¿Algunos profesores inician sus clases haciendo un bosquejo de lo que enseñaran.Estos bosquejos son?</label>
+                            <p>
+                                <label><input type="radio" name="radio40" id="radio40" value="1"/>Algo util para mi</label><br />
+                                <label><input type="radio" name="radio40" id="radio40" value="2"/>M5y utiles para mi</label><br />
+                            </p><hr /></li>
+                        <li><label>41. ¿La idea de hacer tarea en grupo con una sola calificación para todos?</label>
+                            <p>
+                                <label><input type="radio" name="radio41" id="radio41" value="1"/>Me parece bien </label><br />
+                                <label><input type="radio" name="radio41" id="radio41" value="2"/>No  me parece bien</label><br />
+                            </p><hr ></li>
+                        <li><label>42. ¿Cuando hago grande cálculos ?</label>
+                            <p>
+                                <label><input type="radio" name="radio42" id="radio42" value="1"/>Tiendo a repetir todos mis pasos y revisar cuidadosamente mi trabajo</label><br />
+                                <label><input type="radio" name="radio42" id="radio42" value="2"/>Me cansa hacer su revisión  y tengo es forzarme  para hacerlo </label><br />
+                            </p><hr /></li>
+                        <li><label>43 ¿Tiendo a recodar lugares  en los que he estado?</label>
+                            <p>
+                                <label><input type="radio" name="radio43" id="radio43" value="1"/>Fácilmnte y con bastante exactitud</label><br />
+                                <label><input type="radio" name="radio43" id="radio43" value="2"/>Con dificultad y sin mucho detalle</label><br />
+                            </p><hr /></li>
+                        <li><label>44. ¿Cuando resuelvo problemas en grupo, es más probable que yo ?</label>
+                            <p>
+                                <label><input type="radio" name="radio59" id="radio44" />Piense en los pasos para la solución de los problemas </label><br />
+                                <label><input type="radio" name="radio44" id="radio44" />Piense en las posibles consecuencias o aplicaciones de la solución en un amplio rango de campos</label><br />
+                            </p><hr /></li>
+                    </ul>
+                </div>
+                <button type="button" name="result" id="result">Resultado</button>
+            </form>
+        </div>
+            <script type="text/javascript"></script>
+            <script language="javascript">
+                $('#result').click(function(){
+                    var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
+                            + parseInt($('input:radio[id=radio7]:checked').val()) + parseInt($('input:radio[id=radio9]:checked').val())
+                            + parseInt($('input:radio[id=radio13]:checked').val());
+                    var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
+                            + parseInt($('input:radio[id=radio10]:checked').val()) + parseInt($('input:radio[id=radio12]:checked').val())
+                            + parseInt($('input:radio[id=radio15]:checked').val());
+                    var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
+                            + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
+                            + parseInt($('input:radio[id=radio14]:checked').val());
+                    console.log('Visual: '+visual+'; Auditiva: '+auditiva+'; Tactil: '+tactil);
+                });
+            </script>
+    </body>
+</html>
