@@ -4,16 +4,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Estilos de aprendizaje</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" href="css/jPages.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/github.css">
         <!--<script -->
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/highlight.pack.js"></script>
         <script type="text/javascript" src="js/tabifier.js"></script>
-        <script src="js/js.js"></script>
+        <!-- <script src="js/js.js"></script> -->
         <script src="js/jPages.js"></script>
         <script>
             /* when document is ready */
@@ -172,21 +173,52 @@
                 </div>
                 <button type="button" name="result" id="result">Resultado</button>
             </form>
+
+            <!-- modal ver rubricas -->
+            <div class="modal fade" id="modalResult" tabindex="-1" role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Resultados</h4>
+                        </div>
+                        <div class="modal-body">
+                        </div><!-- ./modal-body -->
+                    </div><!-- ./modal-content -->
+                </div><!-- ./modal-dialog -->
+            </div><!-- ./modal fade -->
+            <!-- fin modal -->
+
         </div>
-            <script type="text/javascript"></script>
-            <script language="javascript">
-                $('#result').click(function(){
+        <script type="text/javascript"></script>
+        <script language="javascript">
+            $('#result').click(function(){
+                var ban = true;
+                for (var i = 1; i < 44; i++){
+                    var name = 'input:radio[id=radio' + i + ']';
+                    console.log(name);
+                    if ($(name).is(':checked')) continue;
+                    else{
+                        ban = false;
+                        break;
+                    }
+                }
+
+                if (ban == true){
                     var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
                             + parseInt($('input:radio[id=radio7]:checked').val()) + parseInt($('input:radio[id=radio9]:checked').val())
                             + parseInt($('input:radio[id=radio13]:checked').val());
-                    var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
+                            var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
                             + parseInt($('input:radio[id=radio10]:checked').val()) + parseInt($('input:radio[id=radio12]:checked').val())
                             + parseInt($('input:radio[id=radio15]:checked').val());
-                    var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
+                            var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
                             + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
                             + parseInt($('input:radio[id=radio14]:checked').val());
-                    console.log('Visual: '+visual+'; Auditiva: '+auditiva+'; Tactil: '+tactil);
-                });
-            </script>
+                            console.log('Visual: ' + visual + '; Auditiva: ' + auditiva + '; Tactil: ' + tactil);
+                }else{
+                    alert("Favor de responder todas las preguntas");
+                }
+            });
+        </script>
     </body>
 </html>

@@ -4,16 +4,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Estilos de aprendizaje</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="stylesheet" href="css/jPages.css">
+        <link rel="stylesheet" href="css/jPages.css"> 
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/github.css">
         <!--<script -->
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/highlight.pack.js"></script>
-        <script type="text/javascript" src="js/tabifier.js"></script>
-        <script src="js/js.js"></script>
+        <script type="text/javascript" src="js/tabifier.js"></script> 
+        <!--<script src="js/js.js"></script>-->
         <script src="js/jPages.js"></script>
         <script>
             /* when document is ready */
@@ -21,7 +23,7 @@
                 /* initiate the plugin */
                 $("div.holder").jPages({
                     containerID: "itemContainer",
-                    perPage: 3,
+                    perPage: 5,
                     startPage: 1,
                     startRange: 1,
                     midRange: 5,
@@ -34,6 +36,7 @@
         <style type="text/css">
             .holder {
                 margin: 15px 0;
+                align: text-center;
             }
 
             .holder a {
@@ -299,62 +302,95 @@
                                 <label><input type="radio" name="radio59" id="radio44" value="B" />Piense en las posibles consecuencias o aplicaciones de la solución en un amplio rango de campos</label><br />
                             </p><hr /></li>
                     </ul>
+                    
+                    <!-- navigation holder -->
+                    <div class="holder"></div>
                 </div>
-                <button type="button" name="result" id="result">Resultado</button>
+                <!-- <button type="button" name="result" id="result" data-toggle="modal" data-target="#modalResult">Resultado</button> -->
+                <button type="button" name="result" id="result" class="btn btn-success">Resultado</button>
             </form>
+            
+            <!-- modal ver rubricas -->
+            <div class="modal fade" id="modalResult" tabindex="-1" role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Resultados</h4>
+                        </div>
+                        <div class="modal-body">
+                        </div><!-- ./modal-body -->
+                    </div><!-- ./modal-content -->
+                </div><!-- ./modal-dialog -->
+            </div><!-- ./modal fade -->
+            <!-- fin modal -->
+            
         </div>
-        <script type="text/javascript"></script>
         <script language="javascript">
             $('#result').click(function () {
-                var actRef = $('input:radio[id=radio1]:checked').val()+$('input:radio[id=radio5]:checked').val()
-                        +$('input:radio[id=radio9]:checked').val()+$('input:radio[id=radio13]:checked').val()
-                        +$('input:radio[id=radio17]:checked').val()+$('input:radio[id=radio21]:checked').val()
-                        +$('input:radio[id=radio25]:checked').val()+$('input:radio[id=radio29]:checked').val()
-                        +$('input:radio[id=radio33]:checked').val()+$('input:radio[id=radio37]:checked').val()
-                        +$('input:radio[id=radio41]:checked').val();
-                var sensInt = $('input:radio[id=radio2]:checked').val()+$('input:radio[id=radio6]:checked').val()
-                        +$('input:radio[id=radio10]:checked').val()+$('input:radio[id=radio14]:checked').val()
-                        +$('input:radio[id=radio18]:checked').val()+$('input:radio[id=radio22]:checked').val()
-                        +$('input:radio[id=radio26]:checked').val()+$('input:radio[id=radio30]:checked').val()
-                        +$('input:radio[id=radio34]:checked').val()+$('input:radio[id=radio38]:checked').val()
-                        +$('input:radio[id=radio42]:checked').val();
-                var visVerb = $('input:radio[id=radio3]:checked').val()+$('input:radio[id=radio7]:checked').val()
-                        +$('input:radio[id=radio11]:checked').val()+$('input:radio[id=radio15]:checked').val()
-                        +$('input:radio[id=radio19]:checked').val()+$('input:radio[id=radio23]:checked').val()
-                        +$('input:radio[id=radio27]:checked').val()+$('input:radio[id=radio31]:checked').val()
-                        +$('input:radio[id=radio35]:checked').val()+$('input:radio[id=radio39]:checked').val()
-                        +$('input:radio[id=radio43]:checked').val();
-                var secGlob = $('input:radio[id=radio4]:checked').val()+$('input:radio[id=radio8]:checked').val()
-                        +$('input:radio[id=radio12]:checked').val()+$('input:radio[id=radio16]:checked').val()
-                        +$('input:radio[id=radio20]:checked').val()+$('input:radio[id=radio24]:checked').val()
-                        +$('input:radio[id=radio28]:checked').val()+$('input:radio[id=radio32]:checked').val()
-                        +$('input:radio[id=radio36]:checked').val()+$('input:radio[id=radio40]:checked').val()
-                        +$('input:radio[id=radio44]:checked').val();
-                var actRefArr = actRef.split('');
-                var sensIntArr = sensInt.split('');
-                var visVerbArr = visVerb.split('');
-                var secGlobArr = secGlob.split('');
-                var countA1 = 0, countB1 = 0, countA2 = 0, countB2 = 0, countA3 = 0, countB3 = 0, countA4 = 0, countB4 = 0;
-                for(var i=0; i<actRefArr.length; i++){
-                    if(actRefArr[i]=="A") countA1++;
-                    else countB1++;
-                    if(sensIntArr[i]=="A") countA2++;
-                    else countB2++;
-                    if(visVerbArr[i]=="A") countA3++;
-                    else countB3++;
-                    if(secGlobArr[i]=="A") countA4++;
-                    else countB4++;
+                var ban = true;
+                for(var i=1; i<44; i++){
+                    var name = 'input:radio[id=radio'+i+']';
+                    console.log(name);
+                    if($(name).is(':checked')) continue;
+                    else{ 
+                        ban = false;
+                        break;
+                    }
                 }
-                console.log("A="+countA1+"-B="+countB1+"\nA="+countA2+"-B="+countB2+"\nA="+countA3+"-B="+countB3+"\nA="+countA4+"-B="+countB4+"\n");
-                //Hoja de perfil
-                var ab1 = "", ab2 = "", ab3 = "", ab4 = "";
-                var cad1 = (countA1 > countB1) ? "ACTIVO" : "REFLEXIVO";
-                var cad2 = (countA2 > countB2) ? "SENSORIAL" : "INTUITITVO";
-                var cad3 = (countA3 > countB3) ? "VISUAL" : "VERBAL";
-                var cad4 = (countA4 > countB4) ? "SECUENCIAL" : "GLOBAL";
-                console.log("\n"+cad1+"\n"+cad2+"\n"+cad3+"\n"+cad4);
                 
-                
+                if(ban == true){
+                    var actRef = $('input:radio[id=radio1]:checked').val()+$('input:radio[id=radio5]:checked').val()
+                            +$('input:radio[id=radio9]:checked').val()+$('input:radio[id=radio13]:checked').val()
+                            +$('input:radio[id=radio17]:checked').val()+$('input:radio[id=radio21]:checked').val()
+                            +$('input:radio[id=radio25]:checked').val()+$('input:radio[id=radio29]:checked').val()
+                            +$('input:radio[id=radio33]:checked').val()+$('input:radio[id=radio37]:checked').val()
+                            +$('input:radio[id=radio41]:checked').val();
+                    var sensInt = $('input:radio[id=radio2]:checked').val()+$('input:radio[id=radio6]:checked').val()
+                            +$('input:radio[id=radio10]:checked').val()+$('input:radio[id=radio14]:checked').val()
+                            +$('input:radio[id=radio18]:checked').val()+$('input:radio[id=radio22]:checked').val()
+                            +$('input:radio[id=radio26]:checked').val()+$('input:radio[id=radio30]:checked').val()
+                            +$('input:radio[id=radio34]:checked').val()+$('input:radio[id=radio38]:checked').val()
+                            +$('input:radio[id=radio42]:checked').val();
+                    var visVerb = $('input:radio[id=radio3]:checked').val()+$('input:radio[id=radio7]:checked').val()
+                            +$('input:radio[id=radio11]:checked').val()+$('input:radio[id=radio15]:checked').val()
+                            +$('input:radio[id=radio19]:checked').val()+$('input:radio[id=radio23]:checked').val()
+                            +$('input:radio[id=radio27]:checked').val()+$('input:radio[id=radio31]:checked').val()
+                            +$('input:radio[id=radio35]:checked').val()+$('input:radio[id=radio39]:checked').val()
+                            +$('input:radio[id=radio43]:checked').val();
+                    var secGlob = $('input:radio[id=radio4]:checked').val()+$('input:radio[id=radio8]:checked').val()
+                            +$('input:radio[id=radio12]:checked').val()+$('input:radio[id=radio16]:checked').val()
+                            +$('input:radio[id=radio20]:checked').val()+$('input:radio[id=radio24]:checked').val()
+                            +$('input:radio[id=radio28]:checked').val()+$('input:radio[id=radio32]:checked').val()
+                            +$('input:radio[id=radio36]:checked').val()+$('input:radio[id=radio40]:checked').val()
+                            +$('input:radio[id=radio44]:checked').val();
+                    var actRefArr = actRef.split('');
+                    var sensIntArr = sensInt.split('');
+                    var visVerbArr = visVerb.split('');
+                    var secGlobArr = secGlob.split('');
+                    var countA1 = 0, countB1 = 0, countA2 = 0, countB2 = 0, countA3 = 0, countB3 = 0, countA4 = 0, countB4 = 0;
+                    for(var i=0; i<actRefArr.length; i++){
+                        if(actRefArr[i]=="A") countA1++;
+                        else countB1++;
+                        if(sensIntArr[i]=="A") countA2++;
+                        else countB2++;
+                        if(visVerbArr[i]=="A") countA3++;
+                        else countB3++;
+                        if(secGlobArr[i]=="A") countA4++;
+                        else countB4++;
+                    }
+                    console.log("A="+countA1+"-B="+countB1+"\nA="+countA2+"-B="+countB2+"\nA="+countA3+"-B="+countB3+"\nA="+countA4+"-B="+countB4+"\n");
+                    //Hoja de perfil
+                    var ab1 = "", ab2 = "", ab3 = "", ab4 = "";
+                    var cad1 = (countA1 > countB1) ? "ACTIVO" : "REFLEXIVO";
+                    var cad2 = (countA2 > countB2) ? "SENSORIAL" : "INTUITITVO";
+                    var cad3 = (countA3 > countB3) ? "VISUAL" : "VERBAL";
+                    var cad4 = (countA4 > countB4) ? "SECUENCIAL" : "GLOBAL";
+                    console.log("\n"+cad1+"\n"+cad2+"\n"+cad3+"\n"+cad4);
+                    $('#modalResult').modal(); 
+                }else{
+                    alert("Favor de responder todas las preguntas");
+                }
             });
         </script>
     </body>
