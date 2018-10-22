@@ -22,7 +22,7 @@
                 /* initiate the plugin */
                 $("div.holder").jPages({
                     containerID: "itemContainer",
-                    perPage: 3,
+                    perPage: 5,
                     startPage: 1,
                     startRange: 1,
                     midRange: 5,
@@ -170,8 +170,10 @@
                                 <label><input type="radio" name="radio15" id="radio15" value="3" />Frecuentemente</label><br />
                             </p><hr /></li>
                     </ul>
+                    <!-- navigation holder -->
+                    <div class="holder"></div>
                 </div>
-                <button type="button" name="result" id="result">Resultado</button>
+                <button type="button" name="result" id="result" class="btn btn-success">Resultado</button>
             </form>
 
             <!-- modal ver rubricas -->
@@ -194,7 +196,7 @@
         <script language="javascript">
             $('#result').click(function(){
                 var ban = true;
-                for (var i = 1; i < 44; i++){
+                for (var i = 1; i < 16; i++){
                     var name = 'input:radio[id=radio' + i + ']';
                     console.log(name);
                     if ($(name).is(':checked')) continue;
@@ -215,6 +217,9 @@
                             + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
                             + parseInt($('input:radio[id=radio14]:checked').val());
                             console.log('Visual: ' + visual + '; Auditiva: ' + auditiva + '; Tactil: ' + tactil);
+                    var cad = '<b>Visual: </b>' + visual + '<br><b>Auditiva: </b>'+auditiva+'<br><b>Tactil: </b>'+tactil;
+                    $('#modalResult .modal-body').html(cad);
+                    $('#modalResult').modal(); 
                 }else{
                     alert("Favor de responder todas las preguntas");
                 }

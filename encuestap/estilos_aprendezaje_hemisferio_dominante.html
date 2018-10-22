@@ -21,7 +21,7 @@
                 /* initiate the plugin */
                 $("div.holder").jPages({
                     containerID: "itemContainer",
-                    perPage: 3,
+                    perPage: 5,
                     startPage: 1,
                     startRange: 1,
                     midRange: 5,
@@ -101,24 +101,24 @@
                             </p><hr /></li>
                         <li><label>4. Quen hobbies prefiero(Seleccione una o varias)?</label>
                             <p>
-                                <label><input type="radio" name="radio4" id="radio4" value="9"/>Natación</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="4"/>Tenis</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="7"/>Acampar</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="8"/>Pescar</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="3"/>Cantar</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="5"/>Jardinera</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="4"/>Tocar música</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="3"/>Leer</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="6"/>Las artes y/o los artesanos</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="3"/>El ocio absoluto</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="9"/>Andar en bicicleta</label> <br />
-                                <label><input type="radio" name="radio4" id="radio4" value="5"/>Coleccionar</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="8"/>Escribir</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="1"/>Jugar ajedrez</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="2"/>Resolver acertijos</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="2"/>Bailar</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="5"/>Caminar y/o correr</label><br />
-                                <label><input type="radio" name="radio4" id="radio4" value="7"/>Conversar y debatir</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="9"/>Natación</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="4"/>Tenis</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="7"/>Acampar</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="8"/>Pescar</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="3"/>Cantar</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="5"/>Jardinera</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="4"/>Tocar música</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="3"/>Leer</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="6"/>Las artes y/o los artesanos</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="3"/>El ocio absoluto</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="9"/>Andar en bicicleta</label> <br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="5"/>Coleccionar</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="8"/>Escribir</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="1"/>Jugar ajedrez</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="2"/>Resolver acertijos</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="2"/>Bailar</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="5"/>Caminar y/o correr</label><br />
+                                <label><input type="checkbox" name="radio4[]" id="radio4" value="7"/>Conversar y debatir</label><br />
                             </p><hr /></li>
                         <li><label>5. ¿Si quisiera, por ejemplo, aprender a bailar mejor, necesitaría?</label>
                             <p>
@@ -170,23 +170,25 @@
                             </p><hr /></li>
                         <li><label>14. ¿Las siguientes afirmaciones corresponden a mi caso (seleccione la que crea pertinente)?</label>
                             <p>
-                                <label><input type="radio" name="radio14" id="radio14" value="1"/>Capto rápidamente lo que dicen contratos, manuales de instrucciones y documentos legales</label> <br />
-                                <label><input type="radio" name="radio14" id="radio14" value="7"/>Entiendo bien los esquemas y diagramas</label> <br />
-                                <label><input type="radio" name="radio14" id="radio14" value="9"/>Visualizo intensamente los personajes y escenas de una novela</label><br />
-                                <label><input type="radio" name="radio14" id="radio14" value="1"/>Me es fácil encontrar lo que necesito en el diccionario o la guía telefónica</label><br />
-                                <label><input type="radio" name="radio14" id="radio14" value="1"/>Me gustan los juego de palabras</label><br />
-                                <label><input type="radio" name="radio14" id="radio14" value="3"/>Tomo muchas notas durante reuniones y conferencias</label> <br />
-                                <label><input type="radio" name="radio14" id="radio14" value="1"/>A menudo  las ideas me surgen sin saber donde</label> <br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="1"/>Capto rápidamente lo que dicen contratos, manuales de instrucciones y documentos legales</label> <br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="7"/>Entiendo bien los esquemas y diagramas</label> <br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="9"/>Visualizo intensamente los personajes y escenas de una novela</label><br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="1"/>Me es fácil encontrar lo que necesito en el diccionario o la guía telefónica</label><br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="1"/>Me gustan los juego de palabras</label><br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="3"/>Tomo muchas notas durante reuniones y conferencias</label> <br />
+                                <label><input type="checkbox" name="radio14[]" id="radio14" value="1"/>A menudo  las ideas me surgen sin saber donde</label> <br />
                             </p></li>
                     </ul>
+                    <!-- navigation holder -->
+                    <div class="holder"></div>
                 </div>
-                <button type="button" name="result" id="result">Resultado</button>
+                <button type="button" name="result" id="result" class="btn btn-success">Resultado</button>
             </form>
         </div>
             <script type="text/javascript"></script>
             <script language="javascript">
                 $('#result').click(function(){
-                    var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
+                    /*var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
                             + parseInt($('input:radio[id=radio7]:checked').val()) + parseInt($('input:radio[id=radio9]:checked').val())
                             + parseInt($('input:radio[id=radio13]:checked').val());
                     var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
@@ -195,7 +197,9 @@
                     var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
                             + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
                             + parseInt($('input:radio[id=radio14]:checked').val());
-                    console.log('Visual: '+visual+'; Auditiva: '+auditiva+'; Tactil: '+tactil);
+                            */
+                    var numberOfChecked = $('input:checkbox:checked').length;
+                    console.log(numberOfChecked);
                 });
             </script>
     </body>
