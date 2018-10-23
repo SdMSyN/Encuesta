@@ -4,16 +4,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <title>Estilos de aprendizaje</title>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <link rel="stylesheet" href="css/jPages.css">
+        <link rel="stylesheet" href="css/jPages.css"> 
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/github.css">
         <!--<script -->
         <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/highlight.pack.js"></script>
-        <script type="text/javascript" src="js/tabifier.js"></script>
-        <script src="js/js.js"></script>
+        <script type="text/javascript" src="js/tabifier.js"></script> 
+        <!--<script src="js/js.js"></script>-->
         <script src="js/jPages.js"></script>
         <script>
             /* when document is ready */
@@ -71,7 +72,18 @@
     </head>
     <body>
         <div class="container" id="advanced-search-form">
-            <h2>Estilos de aprendizaje</h2>
+            <h2>Estilos de aprendizaje Hemisferio Dominante</h2>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <a href="estilos_aprendizaje_felder.html" class="btn btn-info">Felder</a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="estilos_aprendizaje_caderros.html" class="btn btn-info">Caderros</a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-primary">Hemisferios</a>
+                </div>
+            </div>
             <form>
                 <div id="content" class="defaults">
                     <!-- navigation holder -->
@@ -184,22 +196,81 @@
                 </div>
                 <button type="button" name="result" id="result" class="btn btn-success">Resultado</button>
             </form>
+            
+            <!-- modal ver rubricas -->
+            <div class="modal fade" id="modalResult" tabindex="-1" role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Resultados</h4>
+                        </div>
+                        <div class="modal-body">
+                        </div><!-- ./modal-body -->
+                    </div><!-- ./modal-content -->
+                </div><!-- ./modal-dialog -->
+            </div><!-- ./modal fade -->
+            <!-- fin modal -->
         </div>
             <script type="text/javascript"></script>
             <script language="javascript">
                 $('#result').click(function(){
-                    /*var visual = parseInt($('input:radio[id=radio2]:checked').val()) + parseInt($('input:radio[id=radio4]:checked').val())
-                            + parseInt($('input:radio[id=radio7]:checked').val()) + parseInt($('input:radio[id=radio9]:checked').val())
-                            + parseInt($('input:radio[id=radio13]:checked').val());
-                    var auditiva = parseInt($('input:radio[id=radio1]:checked').val()) + parseInt($('input:radio[id=radio6]:checked').val())
-                            + parseInt($('input:radio[id=radio10]:checked').val()) + parseInt($('input:radio[id=radio12]:checked').val())
-                            + parseInt($('input:radio[id=radio15]:checked').val());
-                    var tactil = parseInt($('input:radio[id=radio3]:checked').val()) + parseInt($('input:radio[id=radio5]:checked').val())
-                            + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
-                            + parseInt($('input:radio[id=radio14]:checked').val());
-                            */
-                    var numberOfChecked = $('input:checkbox:checked').length;
-                    console.log(numberOfChecked);
+                    var ban = true;
+                    for (var i = 1; i < 15; i++){
+                        //var name = 'input:radio[id=radio' + i + ']';
+                        var name = '';
+                        if(i == 4 || i == 14){
+                            name = 'input:checkbox[id=radio' + i + ']';
+                        }else{
+                            name = 'input:radio[id=radio' + i + ']';
+                        }
+                        console.log(name);
+                        if ($(name).is(':checked')) continue;
+                        else{
+                            ban = false;
+                            break;
+                        }
+                    }
+                    
+                    if (ban == true){
+                        var sum = 0;
+                        for(var i=1; i<= 14; i++){
+                            var name = '';
+                            if(i == 4 || i == 14){
+                                name = 'input:checkbox[id=radio' + i + ']';
+                            }else{
+                                name = 'input:radio[id=radio' + i + ']';
+                            }
+                            //console.log(name);
+                            if ($(name).is(':checked')){
+                                sum += parseInt($(name+':checked').val());
+                            }
+                        }
+                        console.log(sum);
+                        var numberOfChecked = $('input:checkbox:checked').length;
+                        console.log(numberOfChecked);
+                        var cad = '';
+                        var ipc = sum / numberOfChecked;
+                        if(ipc >= 1 && ipc <= 3){
+                            cad += 'Predomina tu hemisferio Izquierdo.';
+                            cad += '<br><img src="img/cerebro_izquierdo.png" class="img-responsive img-rounded center-block" >';
+                        }
+                        else if(ipc >= 4 && ipc <= 6){
+                            cad += 'Tus hemisferios están equilibrados.';
+                            cad += '<br><img src="img/cerebro_both.png" class="img-responsive img-rounded center-block" >';
+                        }
+                        else if(ipc >= 7 && ipc <= 10){
+                            cad += 'Predomina tu hemisferio Derecho.';
+                            cad += '<br><img src="img/cerebro_derecho.png" class="img-responsive img-rounded center-block" >';
+                        }
+                        else{
+                            cad += 'Creo que no sabemos sumar.';
+                        }
+                        $('#modalResult .modal-body').html(cad);
+                        $('#modalResult').modal(); 
+                    }else{
+                        alert("Favor de responder todas las preguntas");
+                    }
                 });
             </script>
     </body>

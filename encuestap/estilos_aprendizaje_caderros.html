@@ -72,7 +72,18 @@
     </head>
     <body>
         <div class="container" id="advanced-search-form">
-            <h2>Estilos de aprendizaje</h2>
+            <h2>Estilos de aprendizaje Caderros</h2>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <a href="estilos_aprendizaje_felder.html" class="btn btn-info">Felder</a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="#" class="btn btn-primary">Caderros</a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="estilos_aprendezaje_hemisferio_dominante.html" class="btn btn-info">Hemisferios</a>
+                </div>
+            </div>
             <form>
                 <div id="content" class="defaults">
                     <!-- navigation holder -->
@@ -217,7 +228,25 @@
                             + parseInt($('input:radio[id=radio8]:checked').val()) + parseInt($('input:radio[id=radio11]:checked').val())
                             + parseInt($('input:radio[id=radio14]:checked').val());
                             console.log('Visual: ' + visual + '; Auditiva: ' + auditiva + '; Tactil: ' + tactil);
-                    var cad = '<b>Visual: </b>' + visual + '<br><b>Auditiva: </b>'+auditiva+'<br><b>Tactil: </b>'+tactil;
+                    //var cad = '<b>Visual: </b>' + visual + '<br><b>Auditiva: </b>'+auditiva+'<br><b>Tactil: </b>'+tactil;
+                    var cad = '';
+                    if(visual >= auditiva && visual >= tactil){
+                        cad += 'Tu estilo de aprendizaje es: .';
+                        cad += '<br><img src="img/visual.gif" class="img-responsive img-rounded center-block" >';
+                    }
+                    else if(auditiva >= visual && auditiva >= tactil){
+                        cad += 'Tu estilo de aprendizaje es: .';
+                        cad += '<br><img src="img/auditivo.gif" class="img-responsive img-rounded center-block" >';
+                    } 
+                    else if(tactil >= visual && tactil >= auditiva){
+                        cad += 'Tu estilo de aprendizaje es: .';
+                        cad += '<br><img src="img/tactil.gif" class="img-responsive img-rounded center-block" >';
+                    }
+                    else{
+                        cad += 'Tu aprendizaje esta equilibrado: .';
+                        cad += '<br><img src="img/estilos_aprendizaje.png" class="img-responsive img-rounded center-block" >';
+                    }
+                    
                     $('#modalResult .modal-body').html(cad);
                     $('#modalResult').modal(); 
                 }else{
