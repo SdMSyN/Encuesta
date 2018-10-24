@@ -154,7 +154,7 @@
                             <p>
                                 <label><input type="radio" name="radio11" id="radio11" value="1" />Rara vez</label><br />
                                 <label><input type="radio" name="radio11" id="radio11" value="2" />Algunas veces</label><br />
-                                <label><input type="radio" name="radio11" id="radio11" value="3" />Frecuente12ente</label><br />
+                                <label><input type="radio" name="radio11" id="radio11" value="3" />Frecuentemente</label><br />
                             </p><hr /></li>
                         <li><label>12. ¿Escucho la radio, cintas y grabaciones?</label>
                             <p>
@@ -229,7 +229,22 @@
                             + parseInt($('input:radio[id=radio14]:checked').val());
                             console.log('Visual: ' + visual + '; Auditiva: ' + auditiva + '; Tactil: ' + tactil);
                     //var cad = '<b>Visual: </b>' + visual + '<br><b>Auditiva: </b>'+auditiva+'<br><b>Tactil: </b>'+tactil;
-                    var cad = '';
+                    var total = visual + auditiva + tactil;
+                    var visual1 = visual * 100 / total, visual2 = visual1.toFixed(1);
+                    var auditiva1 = auditiva * 100 / total, auditiva2 = auditiva1.toFixed(1);
+                    var tactil1 = tactil * 100 / total, tactil2 = tactil1.toFixed(1);
+                    var cad = '<div class="progress">'
+                            + '<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="'+visual2+'" aria-valuemin="0" aria-valuemax="100" style="width:'+visual2+'%">'
+                                + 'Visual '+visual2+'%'
+                            + '</div>'
+                            + '<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="'+auditiva2+'" aria-valuemin="0" aria-valuemax="100" style="width:'+auditiva2+'%">'
+                                + 'Auditivo '+auditiva2+'%'
+                            + '</div>'
+                            + '<div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="'+tactil2+'" aria-valuemin="0" aria-valuemax="100" style="width:'+tactil2+'%">'
+                                + 'Kinestésico '+tactil2+'%'
+                            + '</div>'
+                        + '</div>';
+                    /*var cad = '';
                     if(visual >= auditiva && visual >= tactil){
                         cad += 'Tu estilo de aprendizaje es: .';
                         cad += '<br><img src="img/visual.gif" class="img-responsive img-rounded center-block" >';
@@ -245,7 +260,7 @@
                     else{
                         cad += 'Tu aprendizaje esta equilibrado: .';
                         cad += '<br><img src="img/estilos_aprendizaje.png" class="img-responsive img-rounded center-block" >';
-                    }
+                    }*/
                     
                     $('#modalResult .modal-body').html(cad);
                     $('#modalResult').modal(); 

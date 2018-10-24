@@ -22,7 +22,7 @@
                 /* initiate the plugin */
                 $("div.holder").jPages({
                     containerID: "itemContainer",
-                    perPage: 5,
+                    perPage: 7,
                     startPage: 1,
                     startRange: 1,
                     midRange: 5,
@@ -248,18 +248,20 @@
                         }
                         console.log(sum);
                         var numberOfChecked = $('input:checkbox:checked').length;
-                        console.log(numberOfChecked);
+                        var sumAct = numberOfChecked + 12;
+                        console.log(sumAct);
                         var cad = '';
-                        var ipc = sum / numberOfChecked;
-                        if(ipc >= 1 && ipc <= 3){
+                        var ipc = sum / sumAct;
+                        console.log(ipc);
+                        if(ipc >= 1 && ipc < 4){
                             cad += 'Predomina tu hemisferio Izquierdo.';
                             cad += '<br><img src="img/cerebro_izquierdo.png" class="img-responsive img-rounded center-block" >';
                         }
                         else if(ipc >= 4 && ipc <= 6){
                             cad += 'Tus hemisferios están equilibrados.';
-                            cad += '<br><img src="img/cerebro_both.png" class="img-responsive img-rounded center-block" >';
+                            cad += '<br><img src="img/cerebro_both.jpg" class="img-responsive img-rounded center-block" >';
                         }
-                        else if(ipc >= 7 && ipc <= 10){
+                        else if(ipc > 6 && ipc <= 10){
                             cad += 'Predomina tu hemisferio Derecho.';
                             cad += '<br><img src="img/cerebro_derecho.png" class="img-responsive img-rounded center-block" >';
                         }
